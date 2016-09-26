@@ -27,6 +27,19 @@ class UsersListViewController: UITableViewController {
         tableView.register(UserListCell.self, forCellReuseIdentifier: reuseIdentifier)
                 
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(addButtonTapped))
+        StorageManager.instance.fetchUsers()
+            .observeOn(MainScheduler.instance)
+            .subscribe(
+                onError: { error in
+                    if let error = error as? DataError {
+                        let alertVc = UIAlertController(title: "Error", message: error.description, preferredStyle: .alert)
+                        self.navigationController?.present(alertVc, animated: true, completion: nil)
+                    }
+                },
+                onCompleted: {
+                    self.tableView.reloadData()
+                    
+            }).addDisposableTo(disposeBag)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,9 +49,7 @@ class UsersListViewController: UITableViewController {
     
     func addButtonTapped() {
         if let userFormViewController = userFormStoryBoard.instantiateInitialViewController() as? UserFormViewController {
-            let navController = UINavigationController(rootViewController: userFormViewController)
-            navController.modalPresentationStyle = .popover
-            self.present(navController, animated: true, completion: nil)
+            self.showDetailViewController(userFormViewController, sender: self)
         }
 
     }
@@ -82,14 +93,10 @@ class UsersListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let user = storageManager.users[indexPath.row]
         if let userFormViewController = userFormStoryBoard.instantiateInitialViewController() as? UserFormViewController {
-            let navController = UINavigationController(rootViewController: userFormViewController)
-            navController.modalPresentationStyle = .popover
             userFormViewController.user = user
 
-            if let pctrl = navController.popoverPresentationController {
-                pctrl.sourceView = tableView.cellForRow(at: indexPath)
-                self.present(navController, animated: true, completion: nil)
-            }
+            self.showDetailViewController(userFormViewController, sender: self)
+
         }
     }
 
