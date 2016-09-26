@@ -8,12 +8,12 @@
 
 import UIKit
 import RxSwift
+import Kingfisher
+import EZLoadingActivity
 
 class UsersListViewController: UITableViewController {
     
     let storageManager = StorageManager.instance
-    
-    var imageCache = Dictionary<Int, UIImage>()
     
     var disposeBag = DisposeBag()
     
@@ -27,6 +27,7 @@ class UsersListViewController: UITableViewController {
         tableView.register(UserListCell.self, forCellReuseIdentifier: reuseIdentifier)
                 
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(addButtonTapped))
+        
         StorageManager.instance.fetchUsers()
             .observeOn(MainScheduler.instance)
             .subscribe(
@@ -71,17 +72,7 @@ class UsersListViewController: UITableViewController {
         
         cell.nameLabel.text = user.first_name + " " + user.last_name
         cell.emailLabel.text = user.email
-        if !user.avatar_url.isEmpty {
-            if let image = self.imageCache[user.id] {
-                cell.avatarImage = image
-            } else {
-                DataManager.instance.downloadFile(url: user.avatar_url).subscribe(onNext: { data in
-                    self.imageCache[user.id] = UIImage(data: data)
-                    }, onCompleted: {
-                        tableView.reloadRows(at: [indexPath], with: .none)
-                }).addDisposableTo(disposeBag)
-            }
-        }
+        cell.avatarImageUrl = user.avatar_url
 
         return cell
     }

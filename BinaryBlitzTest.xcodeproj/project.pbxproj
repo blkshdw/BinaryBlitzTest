@@ -21,6 +21,7 @@
 		880F3BE31D96C4EF002BDB0A /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880F3BE21D96C4EF002BDB0A /* ObjectMapper.framework */; };
 		880F3BE51D96C4FC002BDB0A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880F3BE41D96C4FC002BDB0A /* SwiftyJSON.framework */; };
 		880F3BE71D96CD21002BDB0A /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880F3BE61D96CD21002BDB0A /* UsersListViewController.swift */; };
+		88345F481D99D546001CEAC2 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88345F471D99D546001CEAC2 /* Kingfisher.framework */; };
 		8852989F1D98530800007514 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8852989E1D98530800007514 /* RxSwift.framework */; };
 		885298A11D98530F00007514 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885298A01D98530F00007514 /* RxCocoa.framework */; };
 		885298A31D98531A00007514 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885298A21D98531A00007514 /* RxBlocking.framework */; };
@@ -51,6 +52,7 @@
 		880F3BE21D96C4EF002BDB0A /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		880F3BE41D96C4FC002BDB0A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		880F3BE61D96CD21002BDB0A /* UsersListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersListViewController.swift; sourceTree = "<group>"; };
+		88345F471D99D546001CEAC2 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		8852989E1D98530800007514 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		885298A01D98530F00007514 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		885298A21D98531A00007514 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				885298A71D989FC400007514 /* AWSS3.framework in Frameworks */,
 				880F3BD81D96BDD6002BDB0A /* Alamofire.framework in Frameworks */,
 				880F3BE31D96C4EF002BDB0A /* ObjectMapper.framework in Frameworks */,
+				88345F481D99D546001CEAC2 /* Kingfisher.framework in Frameworks */,
 				88EBE51D1D9976F2001583AC /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +158,7 @@
 		880F3BD61D96BDD6002BDB0A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				88345F471D99D546001CEAC2 /* Kingfisher.framework */,
 				88EBE51C1D9976F2001583AC /* SnapKit.framework */,
 				88FBEFAD1D98F51500B77A58 /* EZLoadingActivity.framework */,
 				885470801D98B9CF003CFFAA /* AWSCore.framework */,
@@ -304,6 +308,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/AWSS3.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/EZLoadingActivity.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			name = "Run Script";
 			outputPaths = (

@@ -101,7 +101,7 @@ class UserFormViewController: UITableViewController , UIImagePickerControllerDel
                         }
                     },
                     onCompleted: {
-                        self.dismiss(animated: true, completion: nil)
+                        self.navigationController?.popViewController(animated: true)
                     }
             ).addDisposableTo(disposeBag)
         } else {
@@ -115,7 +115,7 @@ class UserFormViewController: UITableViewController , UIImagePickerControllerDel
                         }
                     },
                     onCompleted: {
-                        self.dismiss(animated: true, completion: nil)
+                        self.navigationController?.popViewController(animated: true)
                     }
                 ).addDisposableTo(disposeBag)
         }

@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 class UserListCell: UITableViewCell {
 
@@ -17,11 +18,11 @@ class UserListCell: UITableViewCell {
     
     var avatarView = UIImageView()
     
-    var avatarImage: UIImage? = nil {
+    var avatarImageUrl: String = "" {
         didSet {
-            self.avatarView.image = avatarImage
+            self.avatarView.kf.setImage(with: URL(string: avatarImageUrl))
             avatarView.snp.updateConstraints { make in
-                make.width.lessThanOrEqualTo(avatarImage != nil ? 40 : 0)
+                make.width.lessThanOrEqualTo(avatarImageUrl.isEmpty ? 0 : 40)
             }
         }
     }
@@ -63,6 +64,6 @@ class UserListCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
-        self.avatarImage = nil
+        self.avatarImageUrl = ""
     }
 }
