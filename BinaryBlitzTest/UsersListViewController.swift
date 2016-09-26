@@ -27,6 +27,19 @@ class UsersListViewController: UITableViewController {
         tableView.register(UserListCell.self, forCellReuseIdentifier: reuseIdentifier)
                 
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(addButtonTapped))
+        StorageManager.instance.fetchUsers()
+            .observeOn(MainScheduler.instance)
+            .subscribe(
+                onError: { error in
+                    if let error = error as? DataError {
+                        let alertVc = UIAlertController(title: "Error", message: error.description, preferredStyle: .alert)
+                        self.navigationController?.present(alertVc, animated: true, completion: nil)
+                    }
+                },
+                onCompleted: {
+                    self.tableView.reloadData()
+                    
+            }).addDisposableTo(disposeBag)
     }
     
     override func viewWillAppear(_ animated: Bool) {
