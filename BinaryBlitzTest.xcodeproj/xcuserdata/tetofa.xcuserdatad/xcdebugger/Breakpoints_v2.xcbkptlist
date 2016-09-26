@@ -609,38 +609,6 @@
             endingLineNumber = "137"
             landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BinaryBlitzTest.UserFormViewController.(imagePickerController (__ObjC.UIImagePickerController, didFinishPickingMediaWithInfo : Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()).(closure #1).(closure #2)"
-                  moduleName = "BinaryBlitzTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tetofa/test_blitz/BinaryBlitzTest/BinaryBlitzTest/UserFormViewController.swift"
-                  timestampString = "496600935.468795"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "137"
-                  endingLineNumber = "137"
-                  offsetFromSymbolStart = "152">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BinaryBlitzTest.UserFormViewController.(imagePickerController (__ObjC.UIImagePickerController, didFinishPickingMediaWithInfo : Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()).(closure #1).(closure #3)"
-                  moduleName = "BinaryBlitzTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tetofa/test_blitz/BinaryBlitzTest/BinaryBlitzTest/UserFormViewController.swift"
-                  timestampString = "496600935.471242"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "138"
-                  endingLineNumber = "138"
-                  offsetFromSymbolStart = "13">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -666,12 +634,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BinaryBlitzTest/UsersListViewController.swift"
-            timestampString = "496589729.011981"
+            timestampString = "496604046.91575"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -704,6 +672,22 @@
             startingLineNumber = "41"
             endingLineNumber = "41"
             landmarkName = "UserFormViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BinaryBlitzTest/RootViewController.swift"
+            timestampString = "496602513.405203"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "RootViewController"
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>

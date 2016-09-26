@@ -49,9 +49,7 @@ class UsersListViewController: UITableViewController {
     
     func addButtonTapped() {
         if let userFormViewController = userFormStoryBoard.instantiateInitialViewController() as? UserFormViewController {
-            let navController = UINavigationController(rootViewController: userFormViewController)
-            navController.modalPresentationStyle = .popover
-            self.present(navController, animated: true, completion: nil)
+            self.showDetailViewController(userFormViewController, sender: self)
         }
 
     }
@@ -95,14 +93,10 @@ class UsersListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let user = storageManager.users[indexPath.row]
         if let userFormViewController = userFormStoryBoard.instantiateInitialViewController() as? UserFormViewController {
-            let navController = UINavigationController(rootViewController: userFormViewController)
-            navController.modalPresentationStyle = .popover
             userFormViewController.user = user
 
-            if let pctrl = navController.popoverPresentationController {
-                pctrl.sourceView = tableView.cellForRow(at: indexPath)
-                self.present(navController, animated: true, completion: nil)
-            }
+            self.showDetailViewController(userFormViewController, sender: self)
+
         }
     }
 
