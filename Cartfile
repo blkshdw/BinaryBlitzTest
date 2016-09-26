@@ -1,0 +1,7 @@
+github "Alamofire/Alamofire" ~> 4.0
+github "Hearst-DD/ObjectMapper" ~> 2.0
+github "SwiftyJSON/SwiftyJSON"
+github "ReactiveX/RxSwift" "3.0.0-beta.1"
+github "aws/aws-sdk-ios"
+github "goktugyil/EZLoadingActivity"
+github "SnapKit/SnapKit" ~> 3.0
