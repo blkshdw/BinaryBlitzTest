@@ -64,6 +64,5 @@ class UserListCell: UITableViewCell {
     
     override func prepareForReuse() {
         self.avatarImage = nil
-        self.layoutIfNeeded()
     }
 }

@@ -6,20 +6,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--UsersListViewController-->
         <scene sceneID="Xli-nU-zbB">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="AvU-2D-0Dh" customClass="UsersListViewController" customModule="BinaryBlitzTest" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="UsersListViewController" clearsSelectionOnViewWillAppear="NO" id="AvU-2D-0Dh" customClass="UsersListViewController" customModule="BinaryBlitzTest" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zbP-zW-7df">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Mn5-GK-cwr" customClass="UserListCell" customModule="BinaryBlitzTest" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserListCell" id="Mn5-GK-cwr" customClass="UserListCell" customModule="BinaryBlitzTest" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mn5-GK-cwr" id="maw-FB-5gM">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -29,7 +29,7 @@
                             <outlet property="delegate" destination="AvU-2D-0Dh" id="lRu-bI-9qe"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="zRI-F0-nvV"/>
+                    <navigationItem key="navigationItem" title="Users" id="zRI-F0-nvV"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F70-lO-kBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -62,14 +62,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CZd-y2-Yhs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-903" y="-51"/>
-        </scene>
-        <!--UserFormViewController-->
-        <scene sceneID="YLw-dG-qtl">
-            <objects>
-                <viewControllerPlaceholder storyboardName="UserFormViewController" id="vO5-ZP-rQY" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xgo-Tb-3y2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-124" y="236"/>
         </scene>
     </scenes>
 </document>
