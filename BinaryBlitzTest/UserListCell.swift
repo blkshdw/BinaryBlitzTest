@@ -20,8 +20,9 @@ class UserListCell: UITableViewCell {
     var avatarImage: UIImage? = nil {
         didSet {
             self.avatarView.image = avatarImage
-            self.layoutIfNeeded()
-            self.updateConstraintsIfNeeded()
+            avatarView.snp.updateConstraints { make in
+                make.width.lessThanOrEqualTo(avatarImage != nil ? 40 : 0)
+            }
         }
     }
     
@@ -36,6 +37,7 @@ class UserListCell: UITableViewCell {
         }
         
         avatarView.contentMode = .scaleAspectFit
+        
         
         self.addSubview(nameLabel)
         
@@ -62,5 +64,6 @@ class UserListCell: UITableViewCell {
     
     override func prepareForReuse() {
         self.avatarImage = nil
+        self.layoutIfNeeded()
     }
 }
